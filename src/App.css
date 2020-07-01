@@ -1,0 +1,10 @@
+.video1 {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.roater {
+  display: flex;
+}
