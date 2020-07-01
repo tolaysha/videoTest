@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Video1 from './video1'
 import Video2 from './video2'
+import Video3 from './video3'
 import './App.css'
 
 export default function App() {
@@ -24,6 +25,9 @@ export default function App() {
             <li>
               <Link to="/video2">Variant 2</Link>
             </li>
+            <li>
+              <Link to="/video2">Variant 3</Link>
+            </li>
           </ul>
         </nav>
 
@@ -35,6 +39,9 @@ export default function App() {
           </Route>
           <Route path="/video2">
             <Video2 />
+          </Route>
+          <Route path="/video3">
+            <Video3 />
           </Route>
           <Route path="/">
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>
