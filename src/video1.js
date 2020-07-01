@@ -57,7 +57,7 @@ const Video1 = ({ postMethod }) => {
   return (
     <div className="video1">
       <video ref={videoRef} autoPlay muted playsInline />
-      <button onClick={handleSwitchCamera}>Switch</button>
+      <button onClick={handleSwitchCamera}>Switch)</button>
     </div>
   );
 };

@@ -44,7 +44,7 @@ const handleSwitchCamera =  function(){
   return (
     <div className="video1">
       <video ref={videoElm} muted playsInline />
-      <button onClick={handleSwitchCamera}>Switch</button>
+      <button onClick={handleSwitchCamera}>Switch))))</button>
     </div>
   );
 };

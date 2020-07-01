@@ -34,7 +34,7 @@ const WebcamCapture = () => {
                 width={400}
                 videoConstraints={videoConstraints}
             />
-            <button onClick={capture}>switch</button>
+            <button onClick={capture}>Switch)))</button>
         </>
     );
 };
