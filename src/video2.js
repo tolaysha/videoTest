@@ -53,18 +53,6 @@ const Video1 = ({ postMethod }) => {
         console.error(error);
       });
   }
-  // navigator.mediaDevices.enumerateDevices().then(mediaDevices => {
-  //   let count = 0;
-    
-  //   mediaDevices.forEach((mediaDevice) => {
-  //     if (mediaDevice.kind === 'videoinput') {
-  //       debugger
-  //       ++count;
-  //       videoDevices.push(mediaDevice.deviceId);
-  //     }
-  //   });
-    
-  // });
   const videoRef = (node) => {
     if (node !== null) {
       Node = node;
