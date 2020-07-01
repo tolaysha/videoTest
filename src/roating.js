@@ -8,6 +8,7 @@ import {
 import Video1 from './video1'
 import Video2 from './video2'
 import Video3 from './video3'
+import Video4 from './video4'
 import './App.css'
 
 export default function App() {
@@ -28,6 +29,9 @@ export default function App() {
             <li>
               <Link to="/video3">Variant 3</Link>
             </li>
+            <li>
+              <Link to="/video4">Variant 4</Link>
+            </li>
           </ul>
         </nav>
 
@@ -42,6 +46,9 @@ export default function App() {
           </Route>
           <Route path="/video3">
             <Video3 />
+          </Route>
+          <Route path="/video4">
+            <Video4 />
           </Route>
           <Route path="/">
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>

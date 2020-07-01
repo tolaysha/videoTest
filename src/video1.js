@@ -14,6 +14,9 @@ const Video1 = ({ postMethod }) => {
     };
   }, []);
   const handleSwitchCamera = () => {
+    mainStreamVideo.getTracks().forEach(t => {
+      t.stop();
+    });
     if (cameraMode === "user") {
       setCameraMode("environment");
     } else {
