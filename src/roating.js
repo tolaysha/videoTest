@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +12,20 @@ import Video4 from './video4'
 import './App.css'
 
 export default function App() {
+  const [videoDevices, setVideoDevices] = useState([])
+  function gotDevices(mediaDevices) {
+    let _videoDevices = []
+    mediaDevices.forEach(mediaDevice => {
+      if (mediaDevice.kind === 'videoinput') {
+        _videoDevices.push(mediaDevice);
+      }
+    });
+    setVideoDevices(_videoDevices);
+  }
+  useEffect(() => {
+    navigator.mediaDevices.enumerateDevices()
+      .then(gotDevices)
+  }, [videoDevices])
   const handleCheckFocus = () => {
     let supports = navigator.mediaDevices.getSupportedConstraints();
     if (supports['focusMode'] === true) {
@@ -70,6 +84,14 @@ export default function App() {
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>
             <button onClick={handleCheckFocus}>check focusMode</button>
             <button onClick={handleCheckFocusDistance}>check focusDistance</button>
+            <br />
+            <ul>
+              {
+                videoDevices.map((item, index) => {
+                  return (<li>{item.label}</li>)
+                })}
+            </ul>
+
           </Route>
         </Switch>
       </div>
