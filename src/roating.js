@@ -12,20 +12,20 @@ import Video4 from './video4'
 import './App.css'
 
 export default function App() {
-  const handleCheckFocus = () =>{
+  const handleCheckFocus = () => {
     let supports = navigator.mediaDevices.getSupportedConstraints();
     if (supports['focusMode'] === true) {
-        alert('your device supported focusMode')
-    } else{
       alert('your device supported focusMode')
+    } else {
+      alert('your device did not supported focusMode')
     }
   }
-  const handleCheckFocusDistance = () =>{
+  const handleCheckFocusDistance = () => {
     let supports = navigator.mediaDevices.getSupportedConstraints();
     if (supports['focusDistance'] === true) {
-        alert('your device supported focusDistance')
-    } else{
       alert('your device supported focusDistance')
+    } else {
+      alert('your device did not supported focusDistance')
     }
   }
   return (
