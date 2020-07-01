@@ -26,7 +26,7 @@ export default function App() {
               <Link to="/video2">Variant 2</Link>
             </li>
             <li>
-              <Link to="/video2">Variant 3</Link>
+              <Link to="/video3">Variant 3</Link>
             </li>
           </ul>
         </nav>
