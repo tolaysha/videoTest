@@ -20,6 +20,14 @@ export default function App() {
       alert('your device supported focusMode')
     }
   }
+  const handleCheckFocusDistance = () =>{
+    let supports = navigator.mediaDevices.getSupportedConstraints();
+    if (supports['focusDistance'] === true) {
+        alert('your device supported focusDistance')
+    } else{
+      alert('your device supported focusDistance')
+    }
+  }
   return (
     <Router>
       <div className='router'>
@@ -60,7 +68,8 @@ export default function App() {
           </Route>
           <Route path="/">
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>
-            <button onClick={handleCheckFocus}>check focus</button>
+            <button onClick={handleCheckFocus}>check focusMode</button>
+            <button onClick={handleCheckFocusDistance}>check focusDistance</button>
           </Route>
         </Switch>
       </div>
