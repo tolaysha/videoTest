@@ -39,7 +39,7 @@ export default function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/video1">
-            <Video1 />
+            <Video4 />
           </Route>
           <Route path="/video2">
             <Video2 />
@@ -48,7 +48,7 @@ export default function App() {
             <Video3 />
           </Route>
           <Route path="/video4">
-            <Video4 />
+            <Video1 />
           </Route>
           <Route path="/">
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>
