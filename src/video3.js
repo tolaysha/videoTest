@@ -26,11 +26,12 @@ const WebcamCapture = () => {
     return (
         <>
             <Webcam
+                className='video1'
                 audio={false}
-                height={720}
+                height={250}
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
-                width={1280}
+                width={400}
                 videoConstraints={videoConstraints}
             />
             <button onClick={capture}>Capture photo</button>
