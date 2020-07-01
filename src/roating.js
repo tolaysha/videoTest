@@ -12,6 +12,14 @@ import Video4 from './video4'
 import './App.css'
 
 export default function App() {
+  const handleCheckFocus = () =>{
+    let supports = navigator.mediaDevices.getSupportedConstraints();
+    if (supports['focusMode'] === true) {
+        alert('your device supported focusMode')
+    } else{
+      alert('your device supported focusMode')
+    }
+  }
   return (
     <Router>
       <div className='router'>
@@ -52,6 +60,7 @@ export default function App() {
           </Route>
           <Route path="/">
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>
+            <button onClick={handleCheckFocus}>check focus</button>
           </Route>
         </Switch>
       </div>
