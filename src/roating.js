@@ -36,6 +36,8 @@ export default function App() {
   }
   const handleCheckMediaStream = () => {
     if (typeof navigator.mediaDevices.getUserMedia === "function") {
+      alert('your device supported MediaStream')
+    } else {
       alert('your device did not supported MediaStream')
     }
   }
