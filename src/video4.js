@@ -36,7 +36,7 @@ const Video4 = () => {
 
   } else {
     navigator.getUserMedia(defaultsOpts,
-      function (stream) {
+      function (_stream) {
         stream = _stream;
         videoElm.current.srcObject = stream;
         videoElm.current.play();
