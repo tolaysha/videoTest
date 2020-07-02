@@ -41,6 +41,17 @@ export default function App() {
       alert('your device did not supported MediaStream')
     }
   }
+  const handleCheckGetUserMedia = () => {
+    navigator.getUserMedia = navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia;
+
+    if (typeof navigator.getUserMedia === "function") {
+      alert('your device supported getUserMedia')
+    } else {
+      alert('your device did not supported getUserMedia')
+    }
+  }
   const handleCheckFocusDistance = () => {
     let supports = navigator.mediaDevices.getSupportedConstraints();
     if (supports['focusDistance'] === true) {
@@ -92,6 +103,7 @@ export default function App() {
             <button onClick={handleCheckFocus}>check focusMode</button>
             <button onClick={handleCheckFocusDistance}>check focusDistance</button>
             <button onClick={handleCheckMediaStream}>check MediaStream</button>
+            <button onClick={handleCheckGetUserMedia}>check getUserMedia</button>
             <br />
             <ul>
               {
@@ -99,7 +111,7 @@ export default function App() {
                   return (<li key={`${item.label}${index}`}>{item.label}</li>)
                 })}
             </ul>
-            <h5>version-1.2</h5>
+            <h5>version-1.3</h5>
           </Route>
         </Switch>
       </div>
