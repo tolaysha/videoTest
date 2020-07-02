@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/videoTest/static/css/main.260d9a48.chunk.css",
-    "main.js": "/videoTest/static/js/main.f0a16ca0.chunk.js",
-    "main.js.map": "/videoTest/static/js/main.f0a16ca0.chunk.js.map",
+    "main.js": "/videoTest/static/js/main.581e9a68.chunk.js",
+    "main.js.map": "/videoTest/static/js/main.581e9a68.chunk.js.map",
     "runtime-main.js": "/videoTest/static/js/runtime-main.9823fe61.js",
     "runtime-main.js.map": "/videoTest/static/js/runtime-main.9823fe61.js.map",
     "static/js/2.4db1eeac.chunk.js": "/videoTest/static/js/2.4db1eeac.chunk.js",
     "static/js/2.4db1eeac.chunk.js.map": "/videoTest/static/js/2.4db1eeac.chunk.js.map",
     "index.html": "/videoTest/index.html",
-    "precache-manifest.d1deebb0277b2713a58b149e644c1234.js": "/videoTest/precache-manifest.d1deebb0277b2713a58b149e644c1234.js",
+    "precache-manifest.78783e2f9c6dc98ed7dca21ac0b53b7e.js": "/videoTest/precache-manifest.78783e2f9c6dc98ed7dca21ac0b53b7e.js",
     "service-worker.js": "/videoTest/service-worker.js",
     "static/css/main.260d9a48.chunk.css.map": "/videoTest/static/css/main.260d9a48.chunk.css.map",
     "static/js/2.4db1eeac.chunk.js.LICENSE.txt": "/videoTest/static/js/2.4db1eeac.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.9823fe61.js",
     "static/js/2.4db1eeac.chunk.js",
     "static/css/main.260d9a48.chunk.css",
-    "static/js/main.f0a16ca0.chunk.js"
+    "static/js/main.581e9a68.chunk.js"
   ]
 }
