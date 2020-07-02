@@ -86,7 +86,7 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/video1">
+          {/* <Route path="/video1">
             <Video4 />
           </Route>
           <Route path="/video2">
@@ -97,19 +97,19 @@ export default function App() {
           </Route>
           <Route path="/video4">
             <Video1 />
-          </Route>
+          </Route> */}
           <Route path="/videoTest">
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>
-            <button onClick={handleCheckFocus}>check focusMode</button>
+            {/* <button onClick={handleCheckFocus}>check focusMode</button>
             <button onClick={handleCheckFocusDistance}>check focusDistance</button>
             <button onClick={handleCheckMediaStream}>check MediaStream</button>
-            <button onClick={handleCheckGetUserMedia}>check getUserMedia</button>
+            <button onClick={handleCheckGetUserMedia}>check getUserMedia</button> */}
             <br />
             <ul>
-              {
+              {/* {
                 videoDevices.map((item, index) => {
                   return (<li key={`${item.label}${index}`}>{item.label}</li>)
-                })}
+                })} */}
             </ul>
             <h5>version-1.5</h5>
           </Route>
