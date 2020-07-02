@@ -42,15 +42,15 @@ export default function App() {
     }
   }
   const handleCheckGetUserMedia = () => {
-    // navigator.getUserMedia = navigator.getUserMedia ||
-    // navigator.webkitGetUserMedia ||
-    // navigator.mozGetUserMedia;
+    navigator.getUserMedia = navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia;
 
-    // if (typeof navigator.getUserMedia === "function") {
-    //   alert('your device supported getUserMedia')
-    // } else {
-    //   alert('your device did not supported getUserMedia')
-    // }
+    if (typeof navigator.getUserMedia === "function") {
+      alert('your device supported getUserMedia')
+    } else {
+      alert('your device did not supported getUserMedia')
+    }
   }
   const handleCheckFocusDistance = () => {
     let supports = navigator.mediaDevices.getSupportedConstraints();
