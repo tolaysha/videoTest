@@ -65,7 +65,7 @@ export default function App() {
       <div className='router'>
         <nav>
           <ul>
-            <li>
+            {/* <li>
               <Link to="/videoTest">Home</Link>
             </li>
             <li>
@@ -79,6 +79,9 @@ export default function App() {
             </li>
             <li>
               <Link to="/video4">Variant 4</Link>
+            </li> */}
+            <li>
+              <Link to="/">Variant 4</Link>
             </li>
           </ul>
         </nav>
@@ -97,21 +100,24 @@ export default function App() {
           </Route>
           <Route path="/video4">
             <Video1 />
-          </Route> */}
+          </Route>
           <Route path="/videoTest">
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>
-            {/* <button onClick={handleCheckFocus}>check focusMode</button>
+            <button onClick={handleCheckFocus}>check focusMode</button>
             <button onClick={handleCheckFocusDistance}>check focusDistance</button>
             <button onClick={handleCheckMediaStream}>check MediaStream</button>
-            <button onClick={handleCheckGetUserMedia}>check getUserMedia</button> */}
+            <button onClick={handleCheckGetUserMedia}>check getUserMedia</button>
             <br />
             <ul>
-              {/* {
+              {
                 videoDevices.map((item, index) => {
                   return (<li key={`${item.label}${index}`}>{item.label}</li>)
-                })} */}
+                })}
             </ul>
             <h5>version-1.5</h5>
+          </Route> */}
+          <Route path="/">
+            hello
           </Route>
         </Switch>
       </div>
