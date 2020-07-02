@@ -12,7 +12,8 @@ function App() {
 
   return (
     <div className="App">
-      <Root />
+      {/* <Root /> */}
+      on working...  check ipad chrome
     </div>
   );
 }
