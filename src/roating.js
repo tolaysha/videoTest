@@ -13,6 +13,7 @@ import './App.css'
 
 export default function App() {
   const [videoDevices, setVideoDevices] = useState([])
+  const [videoDevicesState, setVideoDevicesState] = useState(0)
   function gotDevices(mediaDevices) {
     let _videoDevices = []
     mediaDevices.forEach(mediaDevice => {
@@ -20,12 +21,15 @@ export default function App() {
         _videoDevices.push(mediaDevice);
       }
     });
+    setVideoDevicesState(1)
     setVideoDevices(_videoDevices);
   }
   useEffect(() => {
-    navigator.mediaDevices.enumerateDevices()
-      .then(gotDevices)
-  }, [videoDevices])
+    if (videoDevicesState === 0) {
+      navigator.mediaDevices.enumerateDevices()
+        .then(gotDevices)
+    }
+  }, [videoDevicesState])
   const handleCheckFocus = () => {
     let supports = navigator.mediaDevices.getSupportedConstraints();
     if (supports['focusMode'] === true) {
@@ -42,7 +46,6 @@ export default function App() {
     }
   }
   const handleCheckGetUserMedia = () => {
-
     if (typeof navigator.getUserMedia === "function") {
       alert('your device supported getUserMedia')
     } else {
