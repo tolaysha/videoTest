@@ -88,10 +88,10 @@ export default function App() {
             <ul>
               {
                 videoDevices.map((item, index) => {
-                  return (<li>{item.label}</li>)
+                  return (<li key={`${item.label}${index}`}>{item.label}</li>)
                 })}
             </ul>
-
+            <h5>version-1</h5>
           </Route>
         </Switch>
       </div>
