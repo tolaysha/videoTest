@@ -34,7 +34,6 @@ const Video1 = () => {
         .getUserMedia(mediaStreamConstraints)
         .then((stream) => {
           video.current = node;
-
           mainStreamVideo.current = stream;
           node.srcObject = stream;
           node.play();
