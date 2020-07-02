@@ -35,6 +35,7 @@ const Video4 = () => {
       });
 
   } else {
+    alert('1');
     navigator.getUserMedia(defaultsOpts,
       function (_stream) {
         stream = _stream;
