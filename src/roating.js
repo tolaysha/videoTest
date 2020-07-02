@@ -63,8 +63,9 @@ export default function App() {
   return (
     <Router>
       <div className='router'>
+        <nav>
           <ul>
-            {/* <li>
+            <li>
               <Link to="/videoTest">Home</Link>
             </li>
             <li>
@@ -78,16 +79,14 @@ export default function App() {
             </li>
             <li>
               <Link to="/video4">Variant 4</Link>
-            </li> */}
-            <li>
-              <Link to="/">Variant 4</Link>
             </li>
           </ul>
+        </nav>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          {/* <Route path="/video1">
+          <Route path="/video1">
             <Video4 />
           </Route>
           <Route path="/video2">
@@ -112,10 +111,7 @@ export default function App() {
                   return (<li key={`${item.label}${index}`}>{item.label}</li>)
                 })}
             </ul>
-            <h5>version-1.5</h5>
-          </Route> */}
-          <Route path="/">
-            hello
+            <h5>version-1.6</h5>
           </Route>
         </Switch>
       </div>
