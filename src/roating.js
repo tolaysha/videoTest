@@ -42,9 +42,6 @@ export default function App() {
     }
   }
   const handleCheckGetUserMedia = () => {
-    navigator.getUserMedia = navigator.getUserMedia ||
-    navigator.webkitGetUserMedia ||
-    navigator.mozGetUserMedia;
 
     if (typeof navigator.getUserMedia === "function") {
       alert('your device supported getUserMedia')
@@ -111,7 +108,7 @@ export default function App() {
                   return (<li key={`${item.label}${index}`}>{item.label}</li>)
                 })}
             </ul>
-            <h5>version-1.3</h5>
+            <h5>version-1.4</h5>
           </Route>
         </Switch>
       </div>
