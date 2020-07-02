@@ -29,17 +29,6 @@ const Video1 = () => {
       facingMode: cameraMode,
     },
   };
-  const handleOnclick = () => {
-    const context = convasVideoPageRef.current?.getContext("2d");
-    if (context) {
-      context.canvas.width = mainStream.videoWidth;
-      context.canvas.height = mainStream.videoHeight;
-      context.drawImage(mainStream, 0, 0);
-      const image =
-        convasVideoPageRef.current &&
-        convasVideoPageRef.current.toDataURL("image/png");
-    }
-  };
 
   const videoRef = (node) => {
     if (node !== null) {
@@ -51,6 +40,7 @@ const Video1 = () => {
           mainStreamVideo.current = stream;
           node.srcObject = stream;
           mainStream = node;
+          mainStream.play();
         }, console.error);
     }
   };
