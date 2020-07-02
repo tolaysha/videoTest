@@ -2,11 +2,9 @@ import React, { memo, useEffect, useRef, useState } from "react";
 import "./App.css";
 
 const Video1 = () => {
-  const convasVideoPageRef = useRef(null);
   const video = useRef(null);
   const mainStreamVideo = useRef(null);
   const [cameraMode, setCameraMode] = useState("user");
-  let mainStream;
   useEffect(() => {
     return () => {
       mainStreamVideo.current.getTracks()[0].stop();
@@ -39,8 +37,7 @@ const Video1 = () => {
 
           mainStreamVideo.current = stream;
           node.srcObject = stream;
-          mainStream = node;
-          mainStream.play();
+          node.play();
         }, console.error);
     }
   };
