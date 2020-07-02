@@ -17,7 +17,7 @@ const Video1 = ({ postMethod }) => {
     };
   }, []);
   const handleSwitchCamera = () => {
-    mainStreamVideo.getTracks().forEach(t => {
+    mainStreamVideo.current.getTracks().forEach(t => {
       t.stop();
     });
     const newDeviceIdNumber = deviceIdnumber + 1 === count?0:deviceIdnumber + 1 ;

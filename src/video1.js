@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useRef, useState } from "react";
 import "./App.css";
 
-const Video1 = ({ postMethod }) => {
+const Video1 = () => {
   const convasVideoPageRef = useRef(null);
   const video = useRef(null);
   const mainStreamVideo = useRef(null);
@@ -14,7 +14,7 @@ const Video1 = ({ postMethod }) => {
     };
   }, []);
   const handleSwitchCamera = () => {
-    mainStreamVideo.getTracks().forEach(t => {
+    mainStreamVideo.current.getTracks().forEach(t => {
       t.stop();
     });
     if (cameraMode === "user") {
@@ -56,7 +56,7 @@ const Video1 = ({ postMethod }) => {
   };
   return (
     <div className="video1">
-      <video ref={videoRef} autoPlay muted playsInline />
+      <video ref={videoRef} muted playsInline />
       <button onClick={handleSwitchCamera}>Switch)</button>
     </div>
   );
