@@ -34,6 +34,11 @@ export default function App() {
       alert('your device did not supported focusMode')
     }
   }
+  const handleCheckMediaStream = () => {
+    if (typeof navigator.mediaDevices.getUserMedia === "function") {
+      alert('your device did not supported MediaStream')
+    }
+  }
   const handleCheckFocusDistance = () => {
     let supports = navigator.mediaDevices.getSupportedConstraints();
     if (supports['focusDistance'] === true) {
@@ -84,6 +89,7 @@ export default function App() {
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>
             <button onClick={handleCheckFocus}>check focusMode</button>
             <button onClick={handleCheckFocusDistance}>check focusDistance</button>
+            <button onClick={handleCheckMediaStream}>check MediaStream</button>
             <br />
             <ul>
               {
@@ -91,7 +97,7 @@ export default function App() {
                   return (<li key={`${item.label}${index}`}>{item.label}</li>)
                 })}
             </ul>
-            <h5>version-1.1</h5>
+            <h5>version-1.2</h5>
           </Route>
         </Switch>
       </div>
