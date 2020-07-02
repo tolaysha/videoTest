@@ -98,7 +98,7 @@ export default function App() {
           <Route path="/video4">
             <Video1 />
           </Route>
-          <Route path="/">
+          <Route path="/videoTest">
             <h1>Квест, найди рабочий вариант, где работает смена камеры)</h1>
             <button onClick={handleCheckFocus}>check focusMode</button>
             <button onClick={handleCheckFocusDistance}>check focusDistance</button>
@@ -111,7 +111,7 @@ export default function App() {
                   return (<li key={`${item.label}${index}`}>{item.label}</li>)
                 })}
             </ul>
-            <h5>version-1.4</h5>
+            <h5>version-1.5</h5>
           </Route>
         </Switch>
       </div>
