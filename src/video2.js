@@ -17,7 +17,7 @@ const Video1 = ({ postMethod }) => {
     };
   }, []);
   const handleSwitchCamera = () => {
-    mainStreamVideo.current.getTracks().forEach(t => {
+    mainStreamVideo.getTracks().forEach(t => {
       t.stop();
     });
     const newDeviceIdNumber = deviceIdnumber + 1 === count?0:deviceIdnumber + 1 ;
@@ -66,7 +66,7 @@ const Video1 = ({ postMethod }) => {
   };
   return (
     <div className="video1">
-      <video ref={videoRef} autoPlay muted playsInline />
+      <video ref={videoRef} muted playsInline />
       <button onClick={handleSwitchCamera}>Switch))</button>
     </div>
   );

@@ -10,6 +10,7 @@ import Video2 from './video2'
 import Video3 from './video3'
 import Video4 from './video4'
 import './App.css'
+import MobileDetect from 'mobile-detect'
 
 export default function App() {
   const [videoDevices, setVideoDevices] = useState([])
@@ -37,6 +38,9 @@ export default function App() {
     } else {
       alert('your device did not supported focusMode')
     }
+  }
+  const handleCheckMobile = () => {
+   alert(new MobileDetect(window.navigator.userAgent).mobile())
   }
   const handleCheckMediaStream = () => {
     if (typeof navigator.mediaDevices.getUserMedia === "function") {
@@ -104,6 +108,7 @@ export default function App() {
             <button onClick={handleCheckFocusDistance}>check focusDistance</button>
             <button onClick={handleCheckMediaStream}>check MediaStream</button>
             <button onClick={handleCheckGetUserMedia}>check getUserMedia</button>
+            <button onClick={handleCheckMobile}>is it mobile?</button>
             <br />
             <ul>
               {
