@@ -22,7 +22,7 @@ const Video4 = () => {
     navigator.webkitGetUserMedia ||
     navigator.mozGetUserMedia;
 
-  defaultsOpts.video = { facingMode: shouldFaceUser ? 'user' : 'environment', width: { ideal: 4096 }, height: { ideal: 2160 } }
+  defaultsOpts.video = { facingMode: shouldFaceUser ? 'user' : 'environment', width: { ideal: 2160 }, height: { ideal: 1024 } }
   if (typeof navigator.mediaDevices.getUserMedia === "function") {
     navigator.mediaDevices.getUserMedia(defaultsOpts)
       .then(function (_stream) {
