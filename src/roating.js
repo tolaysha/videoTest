@@ -116,7 +116,7 @@ export default function App() {
                   return (<li key={`${item.label}${index}`}>{item.label}</li>)
                 })}
             </ul>
-            <h5>version-1.6</h5>
+            <h5>version-1.7</h5>
           </Route>
         </Switch>
       </div>
